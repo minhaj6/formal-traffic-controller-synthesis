@@ -1,0 +1,13 @@
+intersection	step_s	ltlsynt_s	slugs_s	bdd_nodes	latches	gates	circuit_s	properties	proved	verify_s
+two_phase	4	0.1	0.2	798	13	467	0.3	31	31	1.2
+two_phase	2	0.1	0.2	1471	15	563	0.3	32	32	1.6
+two_phase	1	0.1	0.2	2114	16	632	0.4	34	34	3.2
+four_phase	4	0.1	0.3	6988	22	1357	0.9	74	74	100.6
+four_phase	2	0.1	0.4	35028	26	2781	2.4	77	74	533.0
+four_phase	1	0.1	0.6	60918	29	3614	4.0	83	74	1222.5
+six_phase	4	0.2	1.2	354297	32	6242	38.4	114	28	1739.8
+six_phase	2	0.2	1.5	1608466	-	-	timeout	-	-	-
+six_phase	1	0.7	1.8	1556021	42	15742	163.5	126	22	2190.4
+nema8	4	1.6	13.9	4006405	-	-	timeout	-	-	-
+nema8	2	4.6	63.4	18081167	-	-	timeout	-	-	-
+nema8	1	18.9	timeout	-	-	-	-	-	-	-

@@ -1,0 +1,7 @@
+check	cases	violations
+sequence	136	0
+yellow_fixed	138	0
+red_fixed	138	0
+yellow_range	138	0
+conflict	186	0
+call_persists	246	170

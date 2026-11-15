@@ -1,0 +1,9 @@
+{
+  "name": "two-phase",
+  "note": "Two crossing through movements; NS is a 45 mph arterial, EW a 30 mph minor street.",
+  "phases": {
+    "ns": {"speed_mph": 45, "width_ft": 60, "min_green_s": 10},
+    "ew": {"speed_mph": 30, "width_ft": 80, "min_green_s": 7}
+  },
+  "conflicts": [["ns", "ew"]]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "six-phase",
+  "note": "Dual ring without minor-street left-turn phases: the phase set in use at UDOT signal 7185. Ring 1: p1 p2 | p4, ring 2: p5 p6 | p8. Geometry and minor-street speed are assumed, as in nema8.json.",
+  "phases": {
+    "p1": {"speed_mph": 20, "width_ft": 90, "min_green_s": 4},
+    "p2": {"speed_mph": 45, "width_ft": 80, "min_green_s": 10},
+    "p4": {"speed_mph": 35, "width_ft": 100, "min_green_s": 7},
+    "p5": {"speed_mph": 20, "width_ft": 90, "min_green_s": 4},
+    "p6": {"speed_mph": 45, "width_ft": 80, "min_green_s": 10},
+    "p8": {"speed_mph": 35, "width_ft": 100, "min_green_s": 7}
+  },
+  "conflicts": [
+    ["p1", "p2"],
+    ["p1", "p4"],
+    ["p1", "p8"],
+    ["p2", "p4"],
+    ["p2", "p8"],
+    ["p4", "p5"],
+    ["p4", "p6"],
+    ["p5", "p6"],
+    ["p5", "p8"],
+    ["p6", "p8"]
+  ]
+}

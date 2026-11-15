@@ -1,0 +1,9 @@
+variant	options	slugs	ltlsynt
+default: no assumption, calls may be withdrawn	-	realizable	realizable
+default, a waiting call is served within 26 s	--max-wait 26	realizable	realizable
+default, a waiting call is served within 24 s	--max-wait 24	unrealizable	unrealizable
+locking detectors: every call is served	--locking	realizable	realizable
+locking detectors, without assuming that calls persist	--locking --drop call_persists	unrealizable	unrealizable
+no max-out: a green with demand is never cut off	--extend	realizable	realizable
+no max-out, without assuming that queues clear	--extend --drop queue_clears	unrealizable	unrealizable
+no max-out, a waiting call is served within 40 s	--extend --max-wait 40	unrealizable	unrealizable

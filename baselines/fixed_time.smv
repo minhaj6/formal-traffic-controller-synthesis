@@ -1,0 +1,18 @@
+-- Hand-written fixed-time controller for intersections/two_phase.json at 1 s steps.
+--
+-- One 31 s cycle, ignoring the detectors:
+--   NS green 10, NS yellow 5, all red 2, EW green 7, EW yellow 4, all red 3
+-- The cycle starts in the all-red interval that precedes NS green.
+MODULE main
+VAR
+  call_ns : boolean;
+  call_ew : boolean;
+  t : 0..30;                       -- position in the cycle
+DEFINE
+  g_ns := t >= 1  & t <= 10;
+  y_ns := t >= 11 & t <= 15;       -- all red 16-17
+  g_ew := t >= 18 & t <= 24;
+  y_ew := t >= 25 & t <= 28;       -- all red 29-30 and 0
+ASSIGN
+  init(t) := 0;
+  next(t) := (t + 1) mod 31;

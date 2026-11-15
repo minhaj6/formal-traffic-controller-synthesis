@@ -1,0 +1,15 @@
+services:
+  dev:
+    build: .
+    image: traffic-light-dev
+    # run as the host user so files created in the mount are not owned by root
+    user: "${HOST_UID:-1000}:${HOST_GID:-1000}"
+    # hard caps so a runaway solver is killed instead of freezing the host
+    mem_limit: ${MEM_LIMIT:-10g}
+    memswap_limit: ${MEM_LIMIT:-10g}
+    cpus: ${CPUS:-4}
+    volumes:
+      - .:/work
+    working_dir: /work
+    stdin_open: true
+    tty: true
